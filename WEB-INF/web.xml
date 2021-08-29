@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+
+  <display-name>Activity Management System</display-name>
+  <description>Welcome to Tomcat</description>
+
+  <servlet>
+    <servlet-name>AgtVal</servlet-name>
+    <servlet-class>AgtVal</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CustVal</servlet-name>
+    <servlet-class>CustVal</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>MgrVal</servlet-name>
+    <servlet-class>MgrVal</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>ZmgrVal</servlet-name>
+    <servlet-class>ZmgrVal</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ZmgrVal</servlet-name>
+    <url-pattern>/ZmgrVal</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>MgrVal</servlet-name>
+    <url-pattern>/MgrVal</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AgtVal</servlet-name>
+    <url-pattern>/AgtVal</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CustVal</servlet-name>
+    <url-pattern>/CustVal</url-pattern>
+  </servlet-mapping>
+
+
+
+  <login-config>
+  </login-config>
+
+</web-app>

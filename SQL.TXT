@@ -1,0 +1,41 @@
+ 1.create table ZMGR(ZMGNO varchar2(10) primary key,FirstName varchar2(30),LastName varchar2(30),LoginName varchar2(30),LoginPwd varchar2(30));
+
+2. create table BR( BRNO varchar2(10) primary key,BRName varchar2(30),BRAddress varchar2(100),ZMGNO varchar2(10), foreign key (ZMGNO) references ZMGR);
+
+3. create table MGR(MGNO varchar2(10) primary key,FirstName varchar2(30),LastName varchar2(30),LoginName varchar2(30),LoginPwd varchar2(30),EmailID varchar2(30),Address varchar2(100),PhoneNo varchar2(20),BRNO varchar2(10), foreign key (BRNO) references BR);
+
+4. create table AGT(AGNO varchar2(10) primary key,FirstName varchar2(30),LastName varchar2(30),LoginName varchar2(30),LoginPwd varchar2(30),PType varchar2(10),BRNO varchar2(10) ,foreign key (BRNO) references BR,EMail varchar2(30),Address varchar2(100),PhoneNo varchar2(20),Target number(4),TargetDate varchar2(50),TargetSetDate varchar2(50),PoliciesSold number(4));
+
+
+5.create table APPT (APID varchar2(10) primary key,AGNO varchar2(10) ,foreign key (AGNO) references AGT,APDate varchar2(50),Time varchar2(20),CSName varchar2(30) );
+
+6.create table CST(CSNO varchar2(10) primary key,
+FirstName varchar2(30),
+LastName varchar2(30),
+LoginName varchar2(30),
+LoginPwd varchar2(30),
+PType varchar2(10),
+PNO varchar2(10),
+AGNO varchar2(10),
+ foreign key (AGNO) references AGT,
+Email varchar2(30),
+Address varchar2(100),
+Phone varchar2(20) );
+
+
+**************************************************************************************
+
+
+1.  insert into zmgr values ('&no','&firstname','&lastname','&loginname','&loginpwd');
+
+
+2.insert into br values ('&no','&brname','&brAddress','&Zmgno');
+
+3.insert into mgr values ('&no','&firstname','&lastname','&loginname','&loginpwd','&Email','&Address','&phone','&brno');
+
+4.Select BR.BRNO,MGR.MGNO,BR.ZMGNO from MGR,BR where MGR.BRNO=BR.BRNO AND BR.ZMGNO='ZM001';
+
+5. insert into agt values ('&no','&firstname','&lastname','&loginname','&loginpwd','&ptype','&brno','&Email','&Address','&phone',&target,'&targetdate','&targetsetdate',&psold);
+
+6.insert into cst values ('&no','&firstname','&lastname','&loginname',
+'&loginpwd','&ptype','&brno',','&Address','&phone',&target,&psold);

@@ -1,0 +1,206 @@
+Registering DSN :
+Start>>> Settings>>>ControlPanel>>>Administrative Tools>>>Data Sources(ODBC)>>
+opens a console
+
+Click on add>>. choose a type of driver for a database like MSAcesss.
+
+
+Then Enter a new DSN name : kmvdsn
+and select the directory where the database is located.
+Done.
+
+Use this dsn name while making a databse connection as in:
+
+
+Connection con=DriverManager.getConnection("jdbc:odbc:kmvdsn");
+
+****************************************************************
+Using Oracle Database :
+
+
+1>....Set Classpath to the following File:
+
+C:\oracle\ora90\jdbc\lib\classes12.jar
+
+OR:
+
+copy this classes12.jar file to a folder called lib in:
+E:\KMV_AMS Project\servlet\WEB-INF\lib\classes12.jar
+
+2>...Use following Driver Manager:
+
+ Class.forName("oracle.jdbc.OracleDriver");
+                        	con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:name","scott","tiger");
+
+(where "name" : is the user defined database name)
+
+
+
+
+****************************************************************
+
+
+
+
+Cookies Used :
+
+cok("zno",zmno)
+
+cok2("mno",mno)
+
+cok1("brno",KBean4.brno)
+
+cok3("ano",ano)
+
+cok4("apid",apid)
+
+cok5("cno",cno)
+
+
+
+
+
+*****************************************************************
+
+Beans USed in our project:
+
+KBean1 : ZmgrList.jsp
+
+KBean2 : MgrList.jsp
+
+KBean3 : ZAgtList.jsp
+
+KBean4 : NewBR.jsp, AddBR.jsp
+
+KBean5 : AddMgr.jsp
+
+KBean6A : RepMgrForm.jsp
+
+KBean6 : RepMgr.jsp
+
+KBean7 : MgrList1.jsp
+
+KBean8 : MAgtList.jsp
+
+KBean9 : AddAgt.jsp
+
+KBean10A : NewAgtTarget.jsp
+
+KBean10 : SetTarget.jsp
+
+KBean11A : AgtPerformForm.jsp
+
+KBean11 : AgtPerfm.jsp
+
+KBean12 : AAgtList.jsp
+
+KBean13 : CstList.jsp
+
+KBean14 : AddCst.jsp
+
+KBean15 : ApptList.jsp
+
+KBean16 : NewAppt.jsp
+
+KBean17 : APolicyDetails.jsp
+
+KBean18 : DelApptList.jsp
+
+KBean19 : DelAppt.jsp
+
+KBean20 : CstAcc.jsp
+
+KBean21 : CstChPwd.jsp
+
+
+
+
+******************************************************************************
+
+FOLDER STRUCTURE FOR TOMCAT Server USe:
+
+     In D:\Program Files\Apache Group\Tomcat 4.1\conf\server.xml 
+       
+      add the following :
+
+           <Context path="/Ams" docBase="e:/KMV_AMS Project/servlet" debug="0"/>
+
+                 In IE type:
+                  http://localhost:8081/Ams/anyfilename
+    
+
+                                                E:\KMV_AMS Project\servlet
+                                                                    |                                            
+                                                 _________ |________________                       
+                                               |                                                    |
+                                     jsp,html files                                   WEB-INF (folder)
+                                                                                                |
+                                                                                                |
+						|
+                                ______________________________________________
+                               |                                              |                                              |
+                           classes (folder)                       lib(folder)                            web.xml (file)
+                               |                                             |
+                ______________                       classes12.jar(file)
+               |                             |
+      ABean (folder)           servlets
+               |
+      KMVBean.java                                                                  
+
+
+
+
+
+*************************************************************************************
+
+FOLDER STRUCTURE FOR WEBLOGIC  Server USe:
+
+     
+    
+
+                                                          E:\kmvAms_weblogic
+                                                                    |                                            
+                                                 _________ |________________ _______________                      
+                                               |                                                    |                               |
+                                     META-INF(folder)                  WEB-INF (folder)      All jsp,html files
+                                                                                                |
+                                                                                                |
+						|
+                ____________________________________________________                                                  |                                       |                                  |                            |
+            classes (folder)               lib(folder)              web.xml (file)        weblogic.xml       
+                  |                                  |
+                  |                         classes12.jar(file)
+                  |
+         ___ _|____________
+         |                                 |
+     ABean (folder)         All servlets
+          |
+    KMVBean.java                                                                  
+
+
+
+
+Contents of the web.xml files are same as in tomcat : servlet mapping.
+
+                 In IE type:
+                  http://localhost:7001/Ams1
+
+Contents of the weblogic.xml file:(set context path here not in the server.xml file like in Tomcat)
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE weblogic-web-app
+    PUBLIC "-//BEA Systems, Inc.//DTD Web Application 7.0//EN"
+    "http://www.bea.com/servers/wls700/dtd/weblogic700-web-jar.dtd" >
+<weblogic-web-app>
+  <context-root>/Ams1</context-root>
+</weblogic-web-app>
+
+
+
+
+
+
+***********************************************************************************
+
+From PaymentDetails.jsp

@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<title> login page</title>
+
+<Frameset name="frame" rows="30%,*" border=0 >
+<Frame  src="nlogo.jsp" scrolling=no></frame>
+<Frameset name="frame1" cols="24%,75%"  border=0>
+
+<Frame name="menu" src="agmenu.jsp" ></frame>
+
+<Frame src="agtaskwelcome.jsp"></frame>
+
+
+</Frameset >
+</Frameset >
+</html>

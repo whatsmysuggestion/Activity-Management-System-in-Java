@@ -1,0 +1,84 @@
+GOto:
+
+D:\Program Files\Apache Group\Tomcat 4.1\conf\server.xml
+
+
+DO the following additions:-
+
+
+
+<!-- Tomcat Root Context -->
+   <Context path="/darsan" docBase="d:/darsan" debug="0"/> 
+   <Context path="/serv" docBase="d:/RamSer/servlet" debug="0"/> 
+   <Context path="/burman" docBase="d:/burman/servlet" debug="0"/>
+   <Context path="/sachin" docBase="d:/goldy/servlet" debug="0"/>
+   <Context path="/Ams" docBase="e:/KMV_AMS Project/servlet" debug="0"/>
+
+
+
+***********************************************************************
+
+In IE browser type:
+
+http://localhost:8080/Ams/any file name
+
+
+***********************************************************************
+
+Write servlet mapping in a xml file called web.xml:
+
+E:\KMV_AMS Project\servlet\WEB-INF\web.xml
+
+Contents of xml files :
+
+
+
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+
+     <servlet>
+        <servlet-name>validate</servlet-name>
+        <servlet-class>validate</servlet-class>
+     </servlet>
+
+     <servlet-mapping>
+        <servlet-name>validate</servlet-name>
+        <url-pattern>/validate</url-pattern>
+    </servlet-mapping>  
+    
+    
+
+
+    <servlet>
+            <servlet-name>ZmgrVal</servlet-name>
+            <servlet-class>ZmgrVal</servlet-class>
+    </servlet>
+    
+         <servlet-mapping>
+            <servlet-name>ZmgrVal</servlet-name>
+            <url-pattern>/ZmgrVal</url-pattern>
+    </servlet-mapping>  
+    
+
+
+
+
+        <servlet>
+                <servlet-name>MgrVal</servlet-name>
+                <servlet-class>MgrVal</servlet-class>
+        </servlet>
+        
+             <servlet-mapping>
+                <servlet-name>MgrVal</servlet-name>
+                <url-pattern>/MgrVal</url-pattern>
+        </servlet-mapping>  
+      
+    
+    
+    </web-app>
+
+***********************************************************************

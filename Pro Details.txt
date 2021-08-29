@@ -1,0 +1,80 @@
+========================================
+1. Activity Management System in Java
+========================================
+Server 		:	Tomcat
+Port		:	8012
+DBMS		:	Access
+Optionl DBMS	:	Oracle
+DSN		:	kmvdsn
+App Name	:	Ams
+
+
+========================================
+2. Automated Network Administration Tool
+========================================
+Server 		:	Tomcat
+Port		:	-
+DBMS		:	Mysql
+Optionl DBMS	:	-
+DSN		:	-
+Jdbc Driver	:	Type 3
+App Name	:	anat
+
+========================================
+3. Call Center Management in Java
+========================================
+Server 		:	Tomcat
+Port		:	8000
+DBMS		:	Oracle
+Optionl DBMS	:	Access
+DSN		:	callcenter
+Jdbc Driver	:	Type 1
+App Name	:	ccm
+NOTE		:	All the HTML Pages are missing
+
+========================================
+4. Catalog Management in Java
+========================================
+Server 		:	Tomcat
+Port		:	-
+DBMS		:	Access
+Optionl DBMS	:	Any
+DSN		:	cust
+Jdbc Driver	:	Type 1
+App Name	:	cata
+NOTE		:	
+
+========================================
+5. Corporate Recruitment System in Java
+========================================
+Server 		:	Tomcat
+Port		:	-
+DBMS		:	Oracle
+Optionl DBMS	:	-
+DSN		:	Ram
+Jdbc Driver	:	Type 1
+App Name	:	crs
+NOTE		:	
+
+========================================
+5. E-Banking in Java
+========================================
+Server 		:	Tomcat
+Port		:	-
+DBMS		:	Access
+Optionl DBMS	:	-
+DSN		:	ebank
+Jdbc Driver	:	Type 1
+App Name	:	crs
+NOTE		:	Not Deployed
+
+
+========================================
+18. Virtual University in Java
+========================================
+Server 		:	Weblogic
+Port		:	-
+DBMS		:	Oracle
+DSN		:	project
+App Name	:	-
+
